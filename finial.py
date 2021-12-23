@@ -1,4 +1,3 @@
-import stream as st
 import datetime                             # import datetime 標準函式
 today = datetime.date.today()               # 使用 datetime.date 取得今天的日期
 age = st.text_input('輸入生日 ( YYYY/MM/DD )：')      # 讓使用者輸入生日，格式為 YYYY/MM/DD
