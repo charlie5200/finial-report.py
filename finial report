@@ -1,6 +1,7 @@
+s
 import datetime                             # import datetime 標準函式
 today = datetime.date.today()               # 使用 datetime.date 取得今天的日期
-age = input('輸入生日 ( YYYY/MM/DD )：')      # 讓使用者輸入生日，格式為 YYYY/MM/DD
+age = st.input('輸入生日 ( YYYY/MM/DD )：')      # 讓使用者輸入生日，格式為 YYYY/MM/DD
 age_list = age.split('/')                   # 將使用者輸入的日期，使用「/」拆成串列
 year = today.year - int(age_list[0])        # 用今天的年份，減去使用者的生日年份 ( 年份差 )
 month = today.month - int(age_list[1])      # 用今天的月份，減去使用者生日的月份 ( 月份差 )
