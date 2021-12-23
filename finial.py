@@ -20,8 +20,8 @@ st.write(f'{year} 歲 {month} 個月 {day} 天')
 a = [int(i) for i in age.split('/')]   # 將輸入的文字轉換成串列 ( 使用串列生成式 )
 s = (a[0]*2+a[1])%3                        # 根據規則公式，計算出 s 的數值
 if s==0:                                   # 依據 s 的數值，給予普通、吉、大吉
-  st.write('普通')
+  st.write('今年運勢:普通')
 if s==1:
-  st.write('吉')
+  st.write('今年運勢:吉')
 if s==2:
-  st.write('大吉')
+  st.write('今年運勢:大吉')
