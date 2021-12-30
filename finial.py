@@ -41,10 +41,6 @@ if confirm_input:
       day = day_list[month] + day       # 將日期差改成該月的天數 + 日期差
     st.write(f'{year} 歲 {month} 個月 {day} 天')
     a = [int(i) for i in age.split('/')]   # 將輸入的文字轉換成串列 ( 使用串列生成式 )
-    option = st.sidebar.selectbox(
-    '你喜歡哪種動物？',
-    ['狗', '貓', '鸚鵡', '天竺鼠'])
-'你的答案：', option
     s = (a[0]*2+a[1])%3                        # 根據規則公式，計算出 s 的數值
     if s==0:                                   # 依據 s 的數值，給予普通、吉、大吉
       st.write('今年運勢:普通')
