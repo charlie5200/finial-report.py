@@ -12,13 +12,13 @@ if confirm_input:
         month = 12 + month                          # 將月份差改成 12 + 月份差
     day_list = [31,28,31,30,31,30,31,31,30,31,30,31]  # 建立一個每個月有多少天的串列
     day = today.day - int(age_list[1])          # 用今天的日期，點去使用者生日的日期 ( 月份差 )
-if day<0:                                   # 如果月份差的數字小於 0，表示生日還沒到
-  month = month - 1                         # 將月份差減少 1
-  if month<0:                               # 如果月份差減少後小於 0
-    year = year - 1                         # 再將年份差減少 1 ( 表示跨了一年 )
-    month = 12 + month                      # 將月份差改成 12 + 月份差
+    if day<0:                                   # 如果月份差的數字小於 0，表示生日還沒到
+      month = month - 1                         # 將月份差減少 1
+      if month<0:                               # 如果月份差減少後小於 0
+        year = year - 1                         # 再將年份差減少 1 ( 表示跨了一年 )
+        month = 12 + month                      # 將月份差改成 12 + 月份差
   day = day_list[month] + day       # 將日期差改成該月的天數 + 日期差
-  st.write(f'{year} 歲 {month} 個月 {day} 天')
+st.write(f'{year} 歲 {month} 個月 {day} 天')
 a = [int(i) for i in age.split('/')]   # 將輸入的文字轉換成串列 ( 使用串列生成式 )
 s = (a[0]*2+a[1])%3                        # 根據規則公式，計算出 s 的數值
 if s==0:                                   # 依據 s 的數值，給予普通、吉、大吉
