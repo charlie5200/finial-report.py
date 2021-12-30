@@ -5,13 +5,13 @@ age = st.text_input ('輸入生日 ( YYYY/MM/DD )：')      # 讓使用者輸入
 age_list = age.split('/')                   # 將使用者輸入的日期，使用「/」拆成串列
 confirm_input = st.button('輸入確認')
 if confirm_input:
-year = today.year - int(age_list[0])        # 用今天的年份，減去使用者的生日年份 ( 年份差 )
+    year = today.year - int(age_list[0])        # 用今天的年份，減去使用者的生日年份 ( 年份差 )
     month = today.month - int(age_list[1])      # 用今天的月份，減去使用者生日的月份 ( 月份差 )
     if month<0:                                 # 如果月份差的數字小於零，表示生日還沒到
         year = year - 1                         # 再將年份差減少 1 ( 表示跨了一年 )
         month = 12 + month                          # 將月份差改成 12 + 月份差
     day_list = [31,28,31,30,31,30,31,31,30,31,30,31]  # 建立一個每個月有多少天的串列
-    day = today.day - int(age_list[1])          # 用今天的日期，點去使用者生日的日期 ( 月份差 )
+day = today.day - int(age_list[1])          # 用今天的日期，點去使用者生日的日期 ( 月份差 )
     if day<0:                                   # 如果月份差的數字小於 0，表示生日還沒到
       month = month - 1                         # 將月份差減少 1
       if month<0:                               # 如果月份差減少後小於 0
